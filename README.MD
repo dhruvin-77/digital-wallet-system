@@ -60,7 +60,7 @@ DigitalWalletSystem/
 │           └── WalletConcurrencyDemo.java
 ├── .gitignore
 ├── pom.xml
-└── README.md
+└── README.MD
 
 ## Main Menu
 
@@ -85,23 +85,29 @@ DigitalWalletSystem/
 
 ### Encapsulation
 
-Classes such as `User`, `Wallet`, `Transaction`, and `Beneficiary` keep their data private and provide methods for controlled access.
+Classes such as User, Wallet, Transaction, and Beneficiary keep their data private and provide methods for controlled access.
 
 ### Inheritance
 
-Payment classes inherit from the abstract `BasePayment` class.
+Payment classes inherit from the abstract BasePayment class.
 
 ### Polymorphism
 
-Different payment classes implement the `PaymentMethod` interface and provide their own payment processing behavior.
+Different payment classes implement the PaymentMethod interface and provide their own payment processing behavior.
 
 ### Abstraction
 
-The `PaymentMethod` interface and `BasePayment` abstract class demonstrate abstraction.
+The PaymentMethod interface and BasePayment abstract class demonstrate abstraction.
 
 ## Exception Handling
 
-A custom `WalletException` is used for wallet-related errors such as invalid amounts, insufficient balance, blocked wallets, invalid beneficiaries, and missing bill information.
+A custom WalletException is used for wallet-related errors such as:
+
+- Invalid amounts
+- Insufficient balance
+- Blocked wallets
+- Invalid beneficiaries
+- Missing bill information
 
 ## File I/O
 
@@ -109,27 +115,34 @@ User information is saved locally using Java object serialization.
 
 Wallet statements can also be exported as text files.
 
-Generated local files such as `users.dat`, `wallet.db`, and the `statements/` folder are excluded from GitHub using `.gitignore`.
+Generated local files such as users.dat, wallet.db, and the statements folder are excluded from GitHub using .gitignore.
 
 ## Database
 
 The project uses SQLite with JDBC.
 
-The database stores basic user information in the `jdbc_users` table.
+The database stores basic user information in the jdbc_users table.
 
-JDBC operations demonstrated include database connection, table creation, insert operation, select operation, prepared statements, and result set processing.
+JDBC operations demonstrated include:
+
+- Database connection
+- Table creation
+- Insert operation
+- Select operation
+- Prepared statements
+- Result set processing
 
 ## Multithreading
 
-`WalletConcurrencyDemo` demonstrates synchronized wallet operations using multiple threads.
+WalletConcurrencyDemo demonstrates synchronized wallet operations using multiple threads.
 
-The `synchronized` keyword is used to protect shared wallet balance updates.
+The synchronized keyword is used to protect shared wallet balance updates.
 
 ## Running the Project
 
 Open the project in Visual Studio Code with the Java Extension Pack installed.
 
-Open `Main.java` and select Run > Run Main.
+Open Main.java and select Run > Run Main.
 
 The application starts from the main menu.
 
@@ -140,7 +153,7 @@ The application starts from the main menu.
 - Java Extension Pack
 - Maven
 
-The SQLite JDBC dependency is managed through `pom.xml`.
+The SQLite JDBC dependency is managed through pom.xml.
 
 ## Security
 
@@ -154,4 +167,4 @@ This project was developed as a Java programming course project to demonstrate p
 
 ## Author
 
-**Dhruvin Devpura**
+Dhruvin Devpura
