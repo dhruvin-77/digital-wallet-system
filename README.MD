@@ -171,4 +171,3 @@ This project was developed as a Java programming course project to demonstrate p
 
 Dhruvin Devpura
 
-GitHub: https://github.com/dhruvin-77
