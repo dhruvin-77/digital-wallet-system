@@ -23,7 +23,7 @@ public class Main {
 
     private static void register() {
         System.out.println("\n========== REGISTER ==========");
-        String name=readText("Enter full name: "), email=readText("Enter email: ");
+        String name=readName("Enter full name: "), email=readEmail("Enter email: ");
         String phone=readPhone("Enter phone number: "), pin=readPin("Create a 4-digit PIN: ");
         for (User u: users) {
             if (u.getEmail().equalsIgnoreCase(email)) { System.out.println("An account with this email already exists."); return; }
@@ -85,7 +85,7 @@ public class Main {
 
     private static void sendMoney(User sender, WalletService s) {
         System.out.println("\n========== SEND MONEY ==========");
-        User receiver=findUser(readText("Enter receiver email: "));
+        User receiver=findUser(readEmail("Enter receiver email: "));
         if (receiver==null) { System.out.println("Receiver not found."); return; }
         if (receiver==sender) { System.out.println("You cannot send money to yourself."); return; }
         WalletService rs=receiver.getWalletService();
@@ -99,7 +99,7 @@ public class Main {
         System.out.println("1. Add Beneficiary"); System.out.println("2. View Beneficiaries");
         System.out.println("3. Remove Beneficiary"); System.out.println("4. Back");
         switch (readInt("Enter choice: ")) {
-            case 1 -> { s.addBeneficiary(new Beneficiary(readText("Enter beneficiary name: "),readText("Enter beneficiary email: "))); System.out.println("Beneficiary added successfully."); }
+            case 1 -> { s.addBeneficiary(new Beneficiary(readName("Enter beneficiary name: "),readEmail("Enter beneficiary email: "))); System.out.println("Beneficiary added successfully."); }
             case 2 -> showBeneficiaries(s.getBeneficiaries());
             case 3 -> removeBeneficiary(s);
             case 4 -> { }
@@ -157,6 +157,22 @@ public class Main {
     }
 
     private static String readText(String message) { System.out.print(message); return scanner.nextLine().trim(); }
+
+    private static String readName(String message) {
+        while (true) {
+            String name=readText(message);
+            if (name.length()>=2 && name.matches("[A-Za-z ]+")) return name;
+            System.out.println("Name must contain only letters and spaces.");
+        }
+    }
+
+    private static String readEmail(String message) {
+        while (true) {
+            String email=readText(message);
+            if (email.matches("^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,}$")) return email;
+            System.out.println("Please enter a valid email address.");
+        }
+    }
 
     private static String readPhone(String message) {
         while (true) { String p=readText(message); if (p.matches("[6-9]\\d{9}")) return p; System.out.println("Phone number must be a valid 10-digit mobile number."); }
