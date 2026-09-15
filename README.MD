@@ -37,6 +37,7 @@ The project allows users to register, log in using a 4-digit PIN, create a walle
 
 ## Project Structure
 
+<pre>
 DigitalWalletSystem/
 ├── src/
 │   └── main/
@@ -61,6 +62,7 @@ DigitalWalletSystem/
 ├── .gitignore
 ├── pom.xml
 └── README.MD
+</pre>
 
 ## Main Menu
 
@@ -168,3 +170,5 @@ This project was developed as a Java programming course project to demonstrate p
 ## Author
 
 Dhruvin Devpura
+
+GitHub: https://github.com/dhruvin-77
