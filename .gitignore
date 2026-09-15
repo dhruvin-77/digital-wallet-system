@@ -1,0 +1,27 @@
+# VS Code / Java generated files
+bin/
+*.class
+
+# Maven generated files
+target/
+
+# Local application data
+wallet.db
+users.dat
+
+# Generated wallet statements
+statements/
+
+# Local configuration
+.env
+.env.*
+*.local
+
+# IDE files
+.vscode/
+.idea/
+*.iml
+
+# OS files
+.DS_Store
+Thumbs.db
