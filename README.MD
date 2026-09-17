@@ -62,7 +62,7 @@ DigitalWalletSystem/
 ├── .gitignore
 ├── pom.xml
 ├── Screenshots
-├── report
+├── report/
 │   └── Digital_Wallet_System_Report
 └── README.MD
 </pre>
