@@ -61,6 +61,7 @@ DigitalWalletSystem/
 │           └── WalletConcurrencyDemo.java
 ├── .gitignore
 ├── pom.xml
+├── Screenshots
 ├── report
 │   └── Digital_Wallet_System_Report
 └── README.MD
