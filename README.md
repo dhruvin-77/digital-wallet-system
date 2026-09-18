@@ -77,6 +77,7 @@ DigitalWalletSystem/
 │           └── WalletService.java
 ├── Screenshots/
 ├── report/
+├── diagrams/
 ├── .gitignore
 ├── pom.xml
 └── README.md
