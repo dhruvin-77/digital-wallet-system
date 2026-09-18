@@ -75,7 +75,7 @@ DigitalWalletSystem/
 │           ├── WalletConcurrencyDemo.java
 │           ├── WalletException.java
 │           └── WalletService.java
-├── screenshots/
+├── Screenshots/
 ├── report/
 ├── .gitignore
 ├── pom.xml
